@@ -6,4 +6,8 @@
     <RootNamespace>Data_Structure_and_Algorithms</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
