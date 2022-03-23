@@ -49,17 +49,19 @@ namespace ClassLibrary
 
             if (D < 0)
             {
-                double fi = Math.Pow((double)(3 * q) / (double)(2 * p * Math.Sqrt(-p / 3.0)), 1.0);
+                double fi = Math.Acos((double)(3 * q) / (double)(2 * p * Math.Sqrt(-p / 3.0)));
 
                 x1 = (w + 2 * Math.Sqrt(-p / 3.0) * Math.Cos(fi / 3.0)).ToString();
-                x2 = (w + 2 * Math.Sqrt(-p / 3.0) * Math.Cos(fi / 3.0) + ((2.0 / 3.0) * Math.PI)).ToString();
-                x3 = (w + 2 * Math.Sqrt(-p / 3.0) * Math.Cos(fi / 3.0) + ((4.0 / 3.0) * Math.PI)).ToString();
+                x2 = (w + 2 * Math.Sqrt(-p / 3.0) * Math.Cos(fi / 3.0 + (2.0 * Math.PI) / 3.0)).ToString();
+                x3 = (w + 2 * Math.Sqrt(-p / 3.0) * Math.Cos(fi / 3.0 + (4.0 * Math.PI) / 3.0)).ToString();
 
                 return;
             }
 
             if (D == 0)
             {
+                Console.WriteLine("asdasd");
+
                 x1 = (w - 2 * checkSquareRoot(q / 2.0, 1.0 / 3.0)).ToString();
                 x2 = x3 = (w + checkSquareRoot(q / 2.0, 1.0 / 3.0)).ToString();
 
