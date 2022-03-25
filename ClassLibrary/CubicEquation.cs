@@ -60,8 +60,6 @@ namespace ClassLibrary
 
             if (D == 0)
             {
-                Console.WriteLine("asdasd");
-
                 x1 = (w - 2 * checkSquareRoot(q / 2.0, 1.0 / 3.0)).ToString();
                 x2 = x3 = (w + checkSquareRoot(q / 2.0, 1.0 / 3.0)).ToString();
 
