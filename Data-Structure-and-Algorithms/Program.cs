@@ -16,8 +16,6 @@ namespace Data_Structure_and_Algorithms
 
             // dhelta == 0
             Console.WriteLine(new CubicEquation(1, 0, 0, 0));
-
-            Console.WriteLine(new CubicEquation(0, 2, 3, 4));
         }
     }
 }
