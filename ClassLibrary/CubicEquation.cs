@@ -13,6 +13,10 @@ namespace ClassLibrary
             this.b = b;
             this.c = c;
             this.d = d;
+
+            if (a == 0)
+                throw new ArgumentOutOfRangeException("Parameter a cannot be equal to 0!");
+
             Calculate();
         }
         private double checkSquareRoot(double x, double y)
