@@ -73,6 +73,6 @@ namespace ClassLibrary
             }
         }
 
-        public override string ToString() => $"x1={x1}, x2={x2}, x3={x3},";
+        public override string ToString() => $"x1={x1}, x2={x2}, x3={x3}";
     }
 }
