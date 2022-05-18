@@ -24,7 +24,7 @@ namespace ClassLibrary
             Calculate();
         }
 
-        private double checkSquareRoot(double x, double y)
+        static double checkSquareRoot(double x, double y)
         {
             var result = Math.Pow(x, y);
 
@@ -84,6 +84,9 @@ namespace ClassLibrary
             double x2 = (-0.5 * (u + v)) + w;
             double x3 = x2;
             double urojona = (Math.Sqrt(3) / 2.0) * (u - v);
+
+            Console.WriteLine($"{x1}, {x2}, {x3}");
+
             Console.WriteLine("urojona: " + urojona);
 
 
@@ -98,6 +101,8 @@ namespace ClassLibrary
             double x1 = w - 2 * Math.Cbrt(q / 2);
             double x23 = w + Math.Cbrt(q / 2);
 
+            Console.WriteLine($"{x1}, {x23}");
+
             Console.WriteLine("Wynikiem równania są dwa pierwiastki rzeczywiste: " + x1 + " oraz drugi-podwójny: " + x23);
         }
 
@@ -111,15 +116,18 @@ namespace ClassLibrary
             double x2 = (w + 2 * Math.Sqrt(-p / 3.0) * Math.Cos(fi / 3.0 + (2.0 * Math.PI) / 3.0));
             double x3 = (w + 2 * Math.Sqrt(-p / 3.0) * Math.Cos(fi / 3.0 + (4.0 * Math.PI) / 3.0));
 
+            Console.WriteLine($"{x1}, {x2}, {x3}");
+
             //Ciąg dalszy
 
             if (x1 == 0)
             {
-                Double y1 = x2;
-                Double y2 = x3;
+                double y1 = x2;
+                double y2 = x3;
+
                 double P, Q, R, S;
-                P = Math.Sqrt(y1);
-                Q = Math.Sqrt(y2);
+                P = checkSquareRoot(y1, 1.0 / 2.0);
+                Q = checkSquareRoot(y2, 1.0 / 2.0);
                 R = -(g / (8 * P * Q));
                 S = b / (4 * a);
                 Console.WriteLine("x1 = " + (P + Q) + " + " + (R - S) + "i");
@@ -127,15 +135,17 @@ namespace ClassLibrary
                 Console.WriteLine("x3 = " + (-P + Q) + " + " + (-R - S) + "i");
                 Console.WriteLine("x4 = " + (-P - Q) + " + " + (R - S) + "i");
 
+                Console.WriteLine($"{P}, {Q}, {R}, {S}");
+
 
             }
             else if (x2 == 0)
             {
-                Double y1 = x1;
-                Double y2 = x3;
+                double y1 = x1;
+                double y2 = x3;
                 double P, Q, R, S;
-                P = Math.Sqrt(y1);
-                Q = Math.Sqrt(y2);
+                P = checkSquareRoot(y1, 1.0 / 2.0);
+                Q = checkSquareRoot(y2, 1.0 / 2.0);
                 R = -(g / (8 * P * Q));
                 S = b / (4 * a);
                 Console.WriteLine("x1 = " + (P + Q) + " + " + (R - S) + "i");
@@ -146,11 +156,11 @@ namespace ClassLibrary
             }
             else
             {
-                Double y1 = x1;
-                Double y2 = x2;
+                double y1 = x1;
+                double y2 = x2;
                 double P, Q, R, S;
-                P = Math.Sqrt(y1);
-                Q = Math.Sqrt(y2);
+                P = checkSquareRoot(y1, 1.0 / 2.0);
+                Q = checkSquareRoot(y2, 1.0 / 2.0);
                 R = -(g / (8 * P * Q));
                 S = b / (4 * a);
                 Console.WriteLine("x1 = " + (P + Q) + " + " + (R - S) + "i");

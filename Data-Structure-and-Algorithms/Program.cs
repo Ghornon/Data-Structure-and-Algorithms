@@ -7,7 +7,7 @@ namespace Data_Structure_and_Algorithms
     {
         static void Main(string[] args)
         {
-            try
+            /*try
             {
                 char[] arguments = { 'a', 'b', 'c', 'd' };
                 double[] values = new double[arguments.Length];
@@ -15,7 +15,7 @@ namespace Data_Structure_and_Algorithms
                 Console.WriteLine($"Kalkulator równania sześcienne (trzeciego stopnia) – równanie algebraiczne postaci ax^3+bx^2+cx+d=0, przy a ≠ 0");
 
                 for (int i = 0; i < arguments.Length; i++)
-                {
+                {0
                     Console.Write($"Podaj {arguments[i]}: ");
                     string line = Console.ReadLine();
                     values[i] = double.Parse(line);
@@ -28,7 +28,7 @@ namespace Data_Structure_and_Algorithms
             } catch (ArgumentOutOfRangeException e)
             {
                 Console.WriteLine(e.Message);
-            }
+            }*/
 
             try
             {
