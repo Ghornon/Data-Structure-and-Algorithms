@@ -17,7 +17,8 @@ namespace Data_Structure_and_Algorithms
             Console.WriteLine("1) Kalkulator równania sześcienne (trzeciego stopnia)");
             Console.WriteLine("2) Kalkulator równania czwartego stopnia");
             Console.WriteLine("3) Kalkulator rownego podziału (algorytm bisekcji)");
-            Console.Write("\r\nWybierz opcje wybierając [1-3]:");
+            Console.WriteLine("4) Problem plecakowy:");
+            Console.Write("\r\nWybierz opcje wybierając [1-4]:");
 
             switch (Console.ReadLine())
             {
@@ -31,6 +32,10 @@ namespace Data_Structure_and_Algorithms
 
                 case "3":
                     StartBisectionMethod();
+                    break;
+
+                case "4":
+                    StartKnapsackProblem();
                     break;
 
                 default:
@@ -120,6 +125,14 @@ namespace Data_Structure_and_Algorithms
             {
                 Console.WriteLine(e.Message);
             }
+            ShowMenuBreake();
+        }
+
+        public static void StartKnapsackProblem()
+        {
+            Console.WriteLine($"\r\nProblem plecakowy");
+            new KnapsackProblem();
+
             ShowMenuBreake();
         }
     }
